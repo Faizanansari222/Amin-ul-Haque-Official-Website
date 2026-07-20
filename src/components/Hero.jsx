@@ -252,7 +252,7 @@ const Hero = () => {
                 <img
                   src={aminImg}
                   alt="Amin Ul Haque - USA Tax Specialist"
-                  className="w-[80%] md:w-full object-cover rounded-full mx-auto"
+                  className="w-[80%] md:w-[85%] object-cover rounded-full mx-auto"
                 />
               </motion.div>
 
