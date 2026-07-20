@@ -79,22 +79,22 @@ const Footer = () => {
     <footer className="bg-primary text-white">
       {/* Main Footer */}
       <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
             
             {/* Column 1 - Brand & About */}
-            <div>
-              <h3 className="text-2xl font-extrabold mb-4">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-3 sm:mb-4">
                 Amin <span className="text-secondary">Ul Haque</span>
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
                 Enrolled Agent & CMA Certified US Tax Specialist with over a decade of expertise in Individuals, Business, and Corporate tax planning.
               </p>
               
               {/* Certifications */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {certifications.map((cert, index) => (
-                  <span key={index} className="bg-white/5 text-secondary text-xs px-3 py-1 rounded-full border border-secondary/20">
+                  <span key={index} className="bg-white/5 text-secondary text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-secondary/20">
                     {cert}
                   </span>
                 ))}
@@ -103,13 +103,13 @@ const Footer = () => {
 
             {/* Column 2 - Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-              <ul className="space-y-3">
+              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Quick Links</h4>
+              <ul className="space-y-2 sm:space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <a 
                       href={link.href} 
-                      className="text-gray-400 hover:text-secondary transition-colors duration-300 text-sm flex items-center gap-2"
+                      className="text-gray-400 hover:text-secondary transition-colors duration-300 text-xs sm:text-sm flex items-center gap-2"
                     >
                       <span className="w-1 h-1 bg-secondary rounded-full"></span>
                       {link.name}
@@ -121,13 +121,13 @@ const Footer = () => {
 
             {/* Column 3 - Services */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
-              <ul className="space-y-3">
+              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Services</h4>
+              <ul className="space-y-2 sm:space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
                     <a 
                       href="#services" 
-                      className="text-gray-400 hover:text-secondary transition-colors duration-300 text-sm flex items-center gap-2"
+                      className="text-gray-400 hover:text-secondary transition-colors duration-300 text-xs sm:text-sm flex items-center gap-2"
                     >
                       <span className="w-1 h-1 bg-secondary rounded-full"></span>
                       {service}
@@ -139,42 +139,43 @@ const Footer = () => {
 
             {/* Column 4 - Contact & Social */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Get in Touch</h4>
+              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Get in Touch</h4>
               
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <EnvelopeIcon className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+              <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <EnvelopeIcon className="h-4 w-4 sm:h-5 sm:w-5 text-secondary flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-gray-400 text-sm">Email</p>
-                    <a href="mailto:aminulhaque.officials96@gmail.com" className="text-white hover:text-secondary transition text-sm">
+                    <p className="text-gray-400 text-[10px] sm:text-xs">Email</p>
+                    <a href="mailto:aminulhaque.officials96@gmail.com" className="text-white hover:text-secondary transition text-xs sm:text-sm break-all">
                       aminulhaque.officials96@gmail.com
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <PhoneIcon className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <PhoneIcon className="h-4 w-4 sm:h-5 sm:w-5 text-secondary flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <a href="tel:+15551234567" className="text-white hover:text-secondary transition text-sm">
+                    <p className="text-gray-400 text-[10px] sm:text-xs">Phone</p>
+                    <a href="tel:+923132454676" className="text-white hover:text-secondary transition text-xs sm:text-sm">
                       +92 3132 454676
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <MapPinIcon className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-secondary flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white text-sm">Houston, Texas, United States (Remote Services)</p>
+                    <p className="text-gray-400 text-[10px] sm:text-xs">Location</p>
+                    <p className="text-white text-xs sm:text-sm">Houston, Texas, United States</p>
+                    <p className="text-gray-400 text-[10px] sm:text-xs">(Remote Services)</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Media */}
               <div>
-                <p className="text-gray-400 text-sm mb-3">Follow Me</p>
-                <div className="flex flex-wrap gap-3">
+                <p className="text-gray-400 text-[10px] sm:text-xs mb-2 sm:mb-3">Follow Me</p>
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {socialPlatforms.map((platform, index) => (
                     <motion.a
                       key={index}
@@ -183,10 +184,10 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.15, y: -3 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`w-10 h-10 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 ${platform.color} border border-white/10 hover:border-transparent`}
+                      className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 ${platform.color} border border-white/10 hover:border-transparent`}
                       aria-label={`Follow on ${platform.name}`}
                     >
-                      <i className={`${platform.icon} text-sm`}></i>
+                      <i className={`${platform.icon} text-[10px] sm:text-xs md:text-sm`}></i>
                     </motion.a>
                   ))}
                 </div>
@@ -197,31 +198,31 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-gray-400 text-sm text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+          <div className="text-gray-400 text-[10px] sm:text-xs text-center md:text-left">
             <p>
               &copy; {currentYear} <span className="text-white font-medium">Amin Ul Haque</span>. 
               All rights reserved.
             </p>
           </div>
           
-          <div className="flex items-center gap-6 text-xs text-gray-400">
-            <div className="flex items-center gap-2">
-              <ShieldCheckIcon className="h-4 w-4 text-secondary" />
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-[10px] sm:text-xs text-gray-400">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <ShieldCheckIcon className="h-3 w-3 sm:h-4 sm:w-4 text-secondary" />
               <span>Secure & Trusted</span>
             </div>
-            <div className="flex items-center gap-2">
-              <AcademicCapIcon className="h-4 w-4 text-secondary" />
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <AcademicCapIcon className="h-3 w-3 sm:h-4 sm:w-4 text-secondary" />
               <span>EA Certified</span>
             </div>
-            <div className="flex items-center gap-2">
-              <BriefcaseIcon className="h-4 w-4 text-secondary" />
-              <span>10+ Years Experience</span>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <BriefcaseIcon className="h-3 w-3 sm:h-4 sm:w-4 text-secondary" />
+              <span>10+ Years</span>
             </div>
           </div>
           
-          <div className="text-gray-500 text-xs text-center md:text-right">
+          <div className="text-gray-500 text-[10px] sm:text-xs text-center md:text-right">
             <p>Built with ❤️ for financial excellence</p>
           </div>
         </div>
