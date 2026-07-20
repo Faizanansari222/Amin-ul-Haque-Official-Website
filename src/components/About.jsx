@@ -12,6 +12,9 @@ import {
 } from "@heroicons/react/24/solid";
 import DrakeLogo from "../assets/Software_Logo/Drake.png";
 import ProconnectLogo from "../assets/Software_Logo/ZOHO.png";
+import DynamicLogo from "../assets/Software_Logo/Dynamics-365.png";
+import WaveLogo from "../assets/Software_Logo/Wave_logo.png";
+import TurboLogo from "../assets/Software_Logo/turbotax.png";
 import QuickBooksLogo from "../assets/Software_Logo/QuickBooks.png";
 import XeroLogo from "../assets/Software_Logo/Wave_logo.png";
 
@@ -63,9 +66,11 @@ const About = () => {
 
   const softwareExpertise = [
     { name: "Drake Tax", logo: DrakeLogo, color: "hover:border-blue-500" },
-    { name: "Proconnect", logo: ProconnectLogo, color: "hover:border-green-500" },
-    { name: "QuickBooks", logo: QuickBooksLogo, color: "hover:border-purple-500" },
-    { name: "Xero", logo: XeroLogo, color: "hover:border-orange-500" },
+    { name: "Dynamic", logo: DynamicLogo, color: "hover:border-blue-900" },
+    { name: "Turbo", logo: TurboLogo, color: "hover:border-red-500" },
+    { name: "Zoho", logo: ProconnectLogo, color: "hover:border-yellow-500" },
+    { name: "QuickBooks", logo: QuickBooksLogo, color: "hover:border-green-500" },
+    { name: "Wave", logo: XeroLogo, color: "hover:border-blue-300" },
   ];
 
   const specializations = [
@@ -204,7 +209,7 @@ const About = () => {
                     <img 
                       src={software.logo} 
                       alt={software.name} 
-                      className="h-6 sm:h-8 md:h-10 object-contain"
+                      className="h-6 sm:h-8 md:w-32 object-contain"
                     />
                   </motion.div>
                 ))}
@@ -308,7 +313,7 @@ const About = () => {
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 href="#contact"
-                className="bg-gradient-to-r from-primary to-secondary/80 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2 text-sm sm:text-base"
+                className="bg-gradient-to-r from-secondary to-secondary/40 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2 text-sm sm:text-base"
               >
                 Let's Work Together
                 <svg
